@@ -15,10 +15,12 @@ if(MSVC)
     endif()
 endif()
 
-add_library(graph STATIC "include/graph.cpp")
+add_library(graph STATIC "include/graph.h" "include/graph.cpp")
 target_include_directories(graph PUBLIC "include")
 # Add source to this project's executable.
+
 add_executable (Lab3-Graph "main.cpp")
 target_link_libraries(Lab3-Graph graph)
+
 
 # TODO: Add tests and install targets if needed.
